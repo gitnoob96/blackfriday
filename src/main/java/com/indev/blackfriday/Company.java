@@ -19,6 +19,12 @@ public class Company {
             price = firstCapsule.getPrice();
             total += price * 5 * 0.2;
         }
+        else if(capsule.equals("machine")){
+            Product firstMachine = machines.get(0);
+
+            price = firstMachine.getPrice();
+            total += price * 5 * 0.2;
+        }
         return price * 5 * 1.2f;
     }
 
@@ -28,7 +34,7 @@ public class Company {
             capsules.add(new Product(quantity, price));
             total += quantity * price;
         }
-        else {
+        else if(capsule.equals("machine")) {
             machines.add(new Product(quantity, price));
             total += quantity * price;
         }
